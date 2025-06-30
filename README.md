@@ -1,19 +1,19 @@
-# 🐱 Meow - Hack The Box (Beginner Level)
+#  Meow - Hack The Box 
 
-> Difficulty: Very Easy  
-> Category: Pwnbox / Intro  
-> IP: [your assigned IP]  
+> Difficulty: Easy  
+> Category: Pwnbox   
+> IP: 10.10.14.108 
 > Author: Hack The Box
 
 ---
 
-## 🧠 Description
+##  Description
 
-**Meow** is the first and easiest box on Hack The Box, designed for complete beginners. It introduces basic port scanning, service identification, and the use of `telnet` to retrieve a flag from a running service. No exploitation or scripting is required — just command-line basics and curiosity.
+**Meow** is the first box on Hack The Box. It introduces basic port scanning, service identification, and the use of `telnet` to retrieve a flag from a running service. No exploitation or scripting is required — just command-line basics and curiosity.
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 - `nmap` – For discovering open ports
 - `telnet` – For connecting to the service
@@ -21,9 +21,9 @@
 
 ---
 
-## 🔍 Enumeration
+##  Enumeration
 
-### 🔎 Step 1: Nmap Scan
+###  Step 1: Nmap Scan
 
 We begin with a full TCP port scan using `nmap`:
 
@@ -41,40 +41,38 @@ PORT   STATE SERVICE VERSION
 
 ---
 
-## ⚙️ Exploitation
+##  Exploitation
 
-### 🔌 Step 2: Connecting to Telnet
+###  Step 2: Connecting to Telnet
 
 We connect to the Telnet service:
 
 ```bash
-telnet <IP>
+telnet 10.129.12.143
 ```
 
 **Output:**
 ```
-Trying <IP>...
-Connected to <IP>.
+Trying 10.129.12.143...
+Connected to 10.129.12.143
 Escape character is '^]'.
 Welcome to Meow!
-HTB{<your_flag_here>}
+Flag: b40abdfe23665f766f9c61ecba8a4c19
 ```
 
 ---
 
-## 🎯 Flag
+## Flag
 
-**User Flag:**
+**User Flag: b40abdfe23665f766f9c61ecba8a4c19 **
 
 ```
-HTB{redacted}
-```
 
-> 💡 Note: No `root` access is needed; the flag is printed directly when connected.
+```
 
 ---
 
-## 📚 Lessons Learned
+##  Lessons Learned
 
 - Basic usage of **nmap** for service discovery.
 - How to use **telnet** to interact with a remote service.
@@ -83,18 +81,10 @@ HTB{redacted}
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 The **Meow** box is a gentle introduction to the Hack The Box platform. It’s perfect for new users to get a feel for port scanning and interacting with remote services using common Linux tools.
 
 ---
 
-## 📝 Bonus Tips
 
-- Telnet is an outdated but still useful protocol for CTF-style challenges.
-- Always scan **all ports** when you’re unsure where services are running.
-- Keep documenting your progress – it helps both learning and job interviews!
-
----
-
-> 🚀 On to the next box? Try **Fawn** – it introduces FTP enumeration!
