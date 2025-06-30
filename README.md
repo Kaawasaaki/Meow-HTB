@@ -3,7 +3,7 @@
 > Difficulty: Easy  
 > Category: Pwnbox   
 > IP: 10.10.14.108 
-> Author: Hack The Box
+
 
 ---
 
@@ -28,7 +28,7 @@
 We begin with a full TCP port scan using `nmap`:
 
 ```bash
-nmap -sV -p- -T4 <IP>
+nmap 10.129.12.143
 ```
 
 **Output:**
@@ -65,10 +65,6 @@ Flag: b40abdfe23665f766f9c61ecba8a4c19
 ## Flag
 
 **User Flag: b40abdfe23665f766f9c61ecba8a4c19 **
-
-```
-
-```
 
 ---
 
